@@ -1,0 +1,149 @@
+/* ## Layout 
+- Mobile: 375px
+- Desktop: 1440px
+*/
+:root{
+
+/* Colors */
+--Green: hsl(75, 94%, 57%);
+
+--White: hsl(0, 0%, 100%);
+
+--Grey-700: hsl(0, 0%, 20%);
+--Grey-800: hsl(0, 0%, 12%);
+--Grey-900: hsl(0, 0%, 8%);
+
+/* font size */
+--fs-body: 0.875rem;
+
+
+/* border-radius */
+--border-radius: 0.50rem;
+
+/* Gap spacing */
+--gap: 0.45rem;
+--gap-row: 1.1rem;
+
+}
+
+
+/*---- box sizing ----*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;}
+
+/*---- reset marigns ----*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+picture {
+    margin: 0;
+}
+
+/*---------make image easier to work with-----*/
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.ff-inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@media (375px <= width <= 1440px) {
+  
+body {
+    margin-block: 10%;
+    margin-inline: 10%;
+    font-size: var(--fs-body);
+    background-color: var(--Grey-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
+}
+
+}
+
+body {
+    margin-block: 10%;
+    margin-inline: 10%;
+    font-size: var(--fs-body);
+    background-color: var(--Grey-900);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4;
+}
+.page-wrapper {
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background-color: var(--Grey-800);
+    max-width: 375px;
+    border-radius: var(--border-radius);
+}
+
+.page-wrapper img {
+    border-radius: 50%;
+}
+
+
+.header {
+    margin-top: var(--gap-row);
+    margin-bottom: var(--gap);
+    color: var(--White);
+    font-size: 1.65rem;
+}
+
+.London {
+    font-size: small;
+    color: var(--Green);
+    font-weight: 600;
+}
+
+.frontend {
+    margin-top: 1.9rem;
+    color: var(--White);
+}
+
+.social-list {
+    text-align: center;
+     min-width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.social-list li:hover, :focus-visible {
+    cursor: pointer;
+    color: black;
+    transition: 10ms;
+    background-color: var(--Green);
+    outline: 2px solid var(--Grey-700);
+}
+
+
+.social-list li {
+    border-radius: var(--border-radius);
+    min-width: 100%;
+    background-color: var(--Grey-700);
+    color: var(--White);
+    padding: 0.55rem;
+    margin-bottom: var(--gap-row);
+}
